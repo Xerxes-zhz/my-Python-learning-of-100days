@@ -119,4 +119,24 @@ list1.sort()            #会改变原list
                         #可以用lambda
                         #实际排的是函数的返回值,可以自定义
 ```
-生成器/式：
+生成(器)/ 生成[式]：
+```
+式:                                              #生成式是个列表，一开始就被算出来了
+f = [x for x in range(1, 10)]
+f = [x + y for x in 'ABCDE' for y in '1234567']
+
+器:                                              #生成器被调用的时候会事实运算内部
+f = (x ** 2 for x in range(1, 1000))             #[式]和(器)
+
+for val in f:
+    print(val)
+    
+函数形式：
+def fib(n):
+a, b = 0, 1
+for _ in range(n):
+    a, b = b, a + b
+    yield a
+
+```
+数字运算：斐波那契a, b = b, a + b
