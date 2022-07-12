@@ -29,13 +29,67 @@ continue
 range(start, end, step)
 ***
 # day6
+## 函数
 def……return  
-函数预设默认值，则未传参数时使用默认值
-'''def a(b=0)
-      return b*b
-   print(a()) # 0
-   print(a(1))  # 1'''
-     
-  
-python不支持函数的重载
 
+python不支持函数的重载
+    即后续定义会覆盖先前的定义
+函数预设默认值，则未传参数时使用默认值
+
+```
+    def a(b=0)
+        return b*b
+    print(a()) # 0
+    print(a(1))  # 1
+```
+*args 可变参数，可以0个或多个参数
+
+使用不同模块同名函数（module）from module import function 模块导入的时候会覆盖
+模块中可执行文件一定要放__main__里，否则调用时会自动执行
+
+## 作用域
+函数内部可以再定义函数
+内置作用域>>全局作用域>>局部作用域>>嵌套作用域
+下层作用域修改参数时相当于重新定义了一个，所以global才能修改
+
+nonlocal 可以改嵌套作用域
+
+减少全局变量，降低代码耦合度
+迪米特法则
+
+用完后还用=>闭包
+***
+# day7
+## 字符串
+`str` 非标量类型（结构化的）
+`int` `float` 标量类型（没有内部结构）
+
+3引号也可写字符串，可以换行
+``\``表示转义
+`\141`8进制的a `x61`十六进制的a
+`\`也可跟Unicode编码表示字符
+运算：`+`拼接, `*`重复, 成员运算`in``not in`, 切片     
+  
+格式化：
+```
+a, b = 5, 10
+print('{0} * {1} = {2}'.format(a, b, a * b))
+
+a, b = 5, 10
+print(f'{a} * {b} = {a * b}')
+
+```
+## list
+```
+for index, elem in enumerate(list1):
+    print(index, elem)
+```
+方法：
+```
+.append(a)      #添加最后
+.insert(i, a)   #在下标i插入a
+.extend([list])
++= [list]       #尾部合并一个list
+.remove(a)      #a如果在列表存在就删除
+
+```
