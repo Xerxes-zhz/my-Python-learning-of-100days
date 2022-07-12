@@ -86,10 +86,18 @@ for index, elem in enumerate(list1):
 ```
 方法：
 ```
-.append(a)      #添加最后
-.insert(i, a)   #在下标i插入a
+.append(a)              #添加最后
+.insert(i, a)           #在下标i插入a
 .extend([list])
-+= [list]       #尾部合并一个list
-.remove(a)      #a如果在列表存在就删除
-
++= [list]               #尾部合并一个list
+.remove(a)              #a如果在列表存在就删除
+.pop(i)                 #删除i
+.pop(len(list) - 1)     #删除最后一个
+.clear()                #清空列表
+```
+切片：
+```
+[a:b:t]     #a到b步长t
+t = -1      #倒转列表
+a < 0 or b < 0  #
 ```
