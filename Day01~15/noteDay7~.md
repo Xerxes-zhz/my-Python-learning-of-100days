@@ -119,3 +119,13 @@ print(set1 >= set3)
 # print(set1.issuperset(set3))
 
 ```
+
+## 字典
+```python
+#字面量语法
+dict = {'a':1, 'b':2}
+#构造器语法
+item1 = dict(one=1, two=2, three=3, four=4)
+#
+
+```
