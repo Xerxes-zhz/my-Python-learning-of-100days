@@ -8,8 +8,28 @@
 `\141`8进制的a `x61`十六进制的a
 `\`也可跟Unicode编码表示字符
 运算：`+`拼接, `*`重复, 成员运算`in``not in`, 切片     
+### string method
+```python
+.capitalize()         #整个字符串首字母大写copy
+.title()              #每个单词首字母大写copy
+.upper()              #全部大写copy
+
+.index("aa")          #相当于find("aa")但直接异常报错
+.startswith("aa")     #是否以"aa"开头
+.endswith("aa")       #结尾
+
+.center(50, "*")      #指定宽度居中，两侧填充"*"
+.rjust(50, "*")       #指定宽度右对齐，左侧填充
+
+.isdigit()            #数字
+.isalpha()            #字母
+.isalnum()            #数字和字母
+
+.strip()              #修剪两侧空格（有内容时，会删除两侧包含字符串的set中任意字符，删到不是为止）
+
+```
   
-格式化：
+### 格式化：
 ```python
 a, b = 5, 10
 print('{0} * {1} = {2}'.format(a, b, a * b))
@@ -122,10 +142,40 @@ print(set1 >= set3)
 
 ## 字典
 ```python
+key：value       #key是唯一的，类似set，重复定义时新value会覆盖掉
+
 #字面量语法
 dict = {'a':1, 'b':2}
 #构造器语法
 item1 = dict(one=1, two=2, three=3, four=4)
-#
+#推导式语法
+item2 = {num: num**2 for num in range(1,10)}
+{key_exp:value_exp for key,value in dict.items() if condition}
+{key_exp:value_exp1 if condition else value_exp2 for key,value in dict.items()}
+
+zip(['a','b','c'],'123')    #zip 可以把两个序列压成一一对应的字典，注意string每个字符都是一个元素
+
+for key in scores:
+    print(f'{key}: {scores[key]}')
+    
+.update(a=b,b=c)            #增加新字典内容
+.get(name, value（可选）)           #没有value可以设置value，none的时候不报错
+
+.popitem()                  #取出最后一个元素
+.pop("a",i)                 #取出指定元素   
+.clear()                    #清空
+
+
+```
+
+
+`print("111",end="\r")`在同一行覆盖输出
+
+## random
+```python
+random
+sample(list,k)          #return a given sample of a sequence  
+                        # pick k numbers in list
+random()        #return a random float number between 0 and 1
 
 ```
