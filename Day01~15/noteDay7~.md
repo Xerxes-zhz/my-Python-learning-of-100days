@@ -38,6 +38,7 @@ a, b = 5, 10
 print(f'{a} * {b} = {a * b}')
 
 ```
+## 传参时 List 和 Dict 默认空值都要用None而不是[]{}
 ## list
 ```python
 for index, elem in enumerate(list1):
