@@ -31,4 +31,4 @@ print map(fmap, lik, liv)
 lim = map(fmap, lik, liv)
 d = dict(lim)
 ```
-
+`zip()`返回的也是mapping
